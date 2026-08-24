@@ -1,0 +1,3295 @@
+{
+  "benchmark": "starboat-long-handbook-evidence-recall-v1",
+  "methodology": "One long enterprise handbook, evidence-unit qrels, two query phrasings per intent. The embedding model, dense threshold, lexical/dense weights and Top-K are controlled; only chunking changes.",
+  "intent_count": 34,
+  "query_count": 68,
+  "controlled_variables": {
+    "embedding_model": "Embedding-3",
+    "embedding_dimension": 2048,
+    "dense_threshold": 0.38,
+    "lexical_weight": 0.35,
+    "dense_weight": 0.65,
+    "fixed_window_chars": 700,
+    "structured_max_tokens": 700,
+    "overlap": 100
+  },
+  "metric_definition": "Recall@K is macro-averaged evidence-unit recall: evidence units covered by the top-K chunks divided by all required evidence units for each query, then averaged across queries.",
+  "strategies": {
+    "fixed_char_window": {
+      "chunk_count": 7,
+      "intent_count": 34,
+      "query_count": 68,
+      "multi_evidence_intents": 2,
+      "evidence_retention": 1.0,
+      "recall_at_1": 0.6985,
+      "recall_at_3": 0.9559,
+      "recall_at_5": 0.9706,
+      "recall_at_10": 0.9706,
+      "cases": [
+        {
+          "case_id": "x1-capacity",
+          "query": "X1 水箱多大，适合多少杯？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [],
+            [],
+            [],
+            []
+          ]
+        },
+        {
+          "case_id": "x1-capacity",
+          "query": "小办公室每天 80 杯该选哪款，水箱容量是多少？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [],
+            [],
+            [],
+            []
+          ]
+        },
+        {
+          "case_id": "x1-cleaning",
+          "query": "X1 做多少杯会提醒深度清洁？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [],
+            [],
+            [],
+            [],
+            []
+          ]
+        },
+        {
+          "case_id": "x1-cleaning",
+          "query": "标准版咖啡机的深度清洁计数是多少？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [],
+            [],
+            [],
+            []
+          ]
+        },
+        {
+          "case_id": "x1-features",
+          "query": "X1 支持双豆仓和自动奶路清洗吗？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [],
+            [],
+            [],
+            [],
+            []
+          ]
+        },
+        {
+          "case_id": "x1-features",
+          "query": "标准版有没有双豆仓、自动洗奶路？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [],
+            [],
+            [],
+            [],
+            []
+          ]
+        },
+        {
+          "case_id": "x2-capacity",
+          "query": "X2 水箱容量和建议日杯量是多少？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [],
+            [],
+            [],
+            []
+          ]
+        },
+        {
+          "case_id": "x2-capacity",
+          "query": "中型办公区每天约 200 杯应该选什么容量？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [],
+            [],
+            []
+          ]
+        },
+        {
+          "case_id": "x2-cleaning",
+          "query": "X2 累计多少杯提示深度清洁？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [],
+            [],
+            [],
+            [],
+            []
+          ]
+        },
+        {
+          "case_id": "x2-cleaning",
+          "query": "专业版的清洁提醒周期是多少杯？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [],
+            [],
+            [],
+            [],
+            []
+          ]
+        },
+        {
+          "case_id": "x2pro-water",
+          "query": "X2 Pro 是水箱还是直连进水，日杯量多少？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [],
+            [],
+            [],
+            []
+          ]
+        },
+        {
+          "case_id": "x2pro-water",
+          "query": "每天 500 杯的企业机型采用什么供水方式？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [],
+            []
+          ]
+        },
+        {
+          "case_id": "x2pro-install",
+          "query": "X2 Pro 首次安装可以自己做吗？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [],
+            [],
+            [],
+            [],
+            []
+          ]
+        },
+        {
+          "case_id": "x2pro-install",
+          "query": "企业版第一次部署对安装方有什么要求？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 0.0,
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.0,
+          "top_sections": [
+            [],
+            [],
+            [],
+            []
+          ]
+        },
+        {
+          "case_id": "enterprise-package",
+          "query": "企业服务包支持时段和巡检内容是什么？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 0.0,
+          "recall_at_3": 0.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [],
+            [],
+            [],
+            [],
+            []
+          ]
+        },
+        {
+          "case_id": "enterprise-package",
+          "query": "需要季度巡检应该购买哪个服务包，服务时间多长？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [],
+            [],
+            [],
+            [],
+            []
+          ]
+        },
+        {
+          "case_id": "premium-package",
+          "query": "哪个服务包有 7×24 P1 响应和备用机？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 0.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [],
+            [],
+            [],
+            [],
+            []
+          ]
+        },
+        {
+          "case_id": "premium-package",
+          "query": "全天紧急支持与备用机服务属于什么套餐？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [],
+            [],
+            [],
+            [],
+            []
+          ]
+        },
+        {
+          "case_id": "e17-checks",
+          "query": "E17 首先要检查哪三项？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [],
+            [],
+            [],
+            []
+          ]
+        },
+        {
+          "case_id": "e17-checks",
+          "query": "供水异常时水箱、滤芯和浮子分别怎么排查？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [],
+            [],
+            [],
+            [],
+            []
+          ]
+        },
+        {
+          "case_id": "e17-escalation",
+          "query": "E17 检查后仍没恢复怎么建单？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 0.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [],
+            [],
+            [],
+            [],
+            []
+          ]
+        },
+        {
+          "case_id": "e17-escalation",
+          "query": "供水故障重启无效后工单要带哪些现场资料？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [],
+            [],
+            [],
+            [],
+            []
+          ]
+        },
+        {
+          "case_id": "e17-direct-water",
+          "query": "X2 Pro 出现 E17 还要检查什么？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [],
+            [],
+            [],
+            [],
+            []
+          ]
+        },
+        {
+          "case_id": "e17-direct-water",
+          "query": "直连进水机型供水异常要看阀门和管路吗？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [],
+            [],
+            [],
+            [],
+            []
+          ]
+        },
+        {
+          "case_id": "e23-first-action",
+          "query": "E23 过热后要停多久并清理哪里？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [],
+            [],
+            [],
+            []
+          ]
+        },
+        {
+          "case_id": "e23-first-action",
+          "query": "研磨电机过热停机后如何初步处理？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 0.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [],
+            [],
+            []
+          ]
+        },
+        {
+          "case_id": "e23-tool-safety",
+          "query": "处理 E23 能用金属工具伸进研磨组件吗？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [],
+            [],
+            [],
+            []
+          ]
+        },
+        {
+          "case_id": "e23-tool-safety",
+          "query": "研磨组件卡住时哪些清理方式被禁止？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [],
+            [],
+            [],
+            [],
+            []
+          ]
+        },
+        {
+          "case_id": "e23-escalation",
+          "query": "E23 等待后还出现，工单级别和响应时间是什么？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [],
+            [],
+            [],
+            [],
+            []
+          ]
+        },
+        {
+          "case_id": "e23-escalation",
+          "query": "研磨电机过热没有恢复要多快响应？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [],
+            [],
+            [],
+            []
+          ]
+        },
+        {
+          "case_id": "e31-checks",
+          "query": "E31 奶路清洗失败要检查什么？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [],
+            [],
+            [],
+            [],
+            []
+          ]
+        },
+        {
+          "case_id": "e31-checks",
+          "query": "奶路清洗异常对清洗液和奶管有什么要求？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 0.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [],
+            [],
+            [],
+            [],
+            []
+          ]
+        },
+        {
+          "case_id": "e31-escalation",
+          "query": "E31 连续失败几次后建什么工单？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [],
+            [],
+            [],
+            [],
+            []
+          ]
+        },
+        {
+          "case_id": "e31-escalation",
+          "query": "完整清洗程序重复失败后如何升级？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 0.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [],
+            [],
+            [],
+            [],
+            []
+          ]
+        },
+        {
+          "case_id": "low-temperature",
+          "query": "咖啡温度偏低，深度清洁后仍异常怎么办？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 0.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [],
+            [],
+            [],
+            []
+          ]
+        },
+        {
+          "case_id": "low-temperature",
+          "query": "无错误码但出杯温度不达标应建哪级工单？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [],
+            [],
+            [],
+            [],
+            []
+          ]
+        },
+        {
+          "case_id": "safety-anomaly",
+          "query": "机器冒烟或漏电时第一步怎么做？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [],
+            []
+          ]
+        },
+        {
+          "case_id": "safety-anomaly",
+          "query": "液体进入机身后可以再次通电拍视频吗？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [],
+            [],
+            [],
+            []
+          ]
+        },
+        {
+          "case_id": "p1-sla",
+          "query": "P1 首次响应和处置方案时限是多少？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [],
+            [],
+            []
+          ]
+        },
+        {
+          "case_id": "p1-sla",
+          "query": "紧急事件一小时响应后多久给方案？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [],
+            [],
+            [],
+            []
+          ]
+        },
+        {
+          "case_id": "p2-sla",
+          "query": "P2 的响应和处置时限是什么？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [],
+            [],
+            [],
+            []
+          ]
+        },
+        {
+          "case_id": "p2-sla",
+          "query": "高优先级故障多久联系、多久出方案？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [],
+            [],
+            [],
+            [],
+            []
+          ]
+        },
+        {
+          "case_id": "p3-sla",
+          "query": "P3 工单多久响应和解决？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 0.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [],
+            [],
+            [],
+            [],
+            []
+          ]
+        },
+        {
+          "case_id": "p3-sla",
+          "query": "一般问题的首次响应及处置方案时限是多少？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [],
+            [],
+            []
+          ]
+        },
+        {
+          "case_id": "repeat-upgrade",
+          "query": "同一故障七天内重复两次怎么处理？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [],
+            [],
+            [],
+            [],
+            []
+          ]
+        },
+        {
+          "case_id": "repeat-upgrade",
+          "query": "短期重复故障什么时候自动升级？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [],
+            [],
+            [],
+            [],
+            []
+          ]
+        },
+        {
+          "case_id": "p1-close",
+          "query": "用户一直不回复，可以直接关闭 P1 吗？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 0.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [],
+            [],
+            [],
+            [],
+            []
+          ]
+        },
+        {
+          "case_id": "p1-close",
+          "query": "紧急工单失联后满足什么条件才能关闭？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 0.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [],
+            [],
+            [],
+            [],
+            []
+          ]
+        },
+        {
+          "case_id": "x1-warranty",
+          "query": "X1 整机和研磨组件各保修几年？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [],
+            [],
+            [],
+            [],
+            []
+          ]
+        },
+        {
+          "case_id": "x1-warranty",
+          "query": "标准版主机与研磨部件的保修期分别多长？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [],
+            [],
+            [],
+            [],
+            []
+          ]
+        },
+        {
+          "case_id": "x2pro-warranty",
+          "query": "X2 Pro 整机和核心泵组保修多久？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [],
+            [],
+            [],
+            [],
+            []
+          ]
+        },
+        {
+          "case_id": "x2pro-warranty",
+          "query": "企业版咖啡机核心泵组有几年质保？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [],
+            [],
+            [],
+            [],
+            []
+          ]
+        },
+        {
+          "case_id": "warranty-exclusion",
+          "query": "客户私自拆机后还能直接认定免费保修吗？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [],
+            [],
+            [],
+            [],
+            []
+          ]
+        },
+        {
+          "case_id": "warranty-exclusion",
+          "query": "人为损坏由谁认定，私拆是否在标准保修内？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [],
+            [],
+            [],
+            [],
+            []
+          ]
+        },
+        {
+          "case_id": "arrival-damage",
+          "query": "到货破损最迟几天发现、几小时提交照片？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [],
+            [],
+            [],
+            []
+          ]
+        },
+        {
+          "case_id": "arrival-damage",
+          "query": "运输损坏的申报窗口和材料时限是什么？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 0.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [],
+            [],
+            []
+          ]
+        },
+        {
+          "case_id": "no-reason-return",
+          "query": "企业设备安装验收后还能无理由退货吗？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 0.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [],
+            [],
+            []
+          ]
+        },
+        {
+          "case_id": "no-reason-return",
+          "query": "已经完成安装验收，合同没特殊约定能否七天无理由？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 0.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [],
+            [],
+            []
+          ]
+        },
+        {
+          "case_id": "refund-approval",
+          "query": "智能助手可以直接批准退款和费用减免吗？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 0.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [],
+            [],
+            []
+          ]
+        },
+        {
+          "case_id": "refund-approval",
+          "query": "换机赔付由机器人决定还是需要人工？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 0.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [],
+            [],
+            [],
+            [],
+            []
+          ]
+        },
+        {
+          "case_id": "tenant-isolation",
+          "query": "A 公司员工能搜索 B 公司内部资料吗？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 0.0,
+          "recall_at_3": 0.0,
+          "recall_at_5": 0.0,
+          "recall_at_10": 0.0,
+          "top_sections": [
+            []
+          ]
+        },
+        {
+          "case_id": "tenant-isolation",
+          "query": "租户名称很相似时允许跨企业查询吗？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 0.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [],
+            []
+          ]
+        },
+        {
+          "case_id": "prompt-injection",
+          "query": "资料里写着忽略系统规则，助手应该照做吗？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [],
+            [],
+            [],
+            [],
+            []
+          ]
+        },
+        {
+          "case_id": "prompt-injection",
+          "query": "知识库附件中的删除工具指令可以执行吗？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            []
+          ]
+        },
+        {
+          "case_id": "e17-cross-section",
+          "query": "E17 完成检查仍失败，要建哪级工单且多久首次响应？",
+          "required_evidence_units": 2,
+          "evidence_retention": 1.0,
+          "recall_at_1": 0.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [],
+            [],
+            [],
+            [],
+            []
+          ]
+        },
+        {
+          "case_id": "e17-cross-section",
+          "query": "供水异常无法恢复后的升级等级和 SLA 是什么？",
+          "required_evidence_units": 2,
+          "evidence_retention": 1.0,
+          "recall_at_1": 0.5,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [],
+            [],
+            [],
+            [],
+            []
+          ]
+        },
+        {
+          "case_id": "safety-cross-section",
+          "query": "设备冒烟时怎么处置，相关工具调用还要记录哪些审计字段？",
+          "required_evidence_units": 2,
+          "evidence_retention": 1.0,
+          "recall_at_1": 0.5,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [],
+            [],
+            [],
+            [],
+            []
+          ]
+        },
+        {
+          "case_id": "safety-cross-section",
+          "query": "安全事故建单后，系统审计至少记录什么？",
+          "required_evidence_units": 2,
+          "evidence_retention": 1.0,
+          "recall_at_1": 0.5,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [],
+            [],
+            [],
+            []
+          ]
+        }
+      ]
+    },
+    "structure_token": {
+      "chunk_count": 37,
+      "intent_count": 34,
+      "query_count": 68,
+      "multi_evidence_intents": 2,
+      "evidence_retention": 1.0,
+      "recall_at_1": 0.8824,
+      "recall_at_3": 0.9926,
+      "recall_at_5": 0.9926,
+      "recall_at_10": 0.9926,
+      "cases": [
+        {
+          "case_id": "x1-capacity",
+          "query": "X1 水箱多大，适合多少杯？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [
+              "星舟智能咖啡设备产品与服务目录",
+              "X1 标准版"
+            ],
+            [
+              "星舟智能咖啡设备产品与服务目录",
+              "X2 专业版"
+            ],
+            [
+              "星舟智能咖啡设备产品与服务目录",
+              "X2 Pro 企业版"
+            ],
+            [
+              "星舟智能设备售后知识库治理说明",
+              "业务范围"
+            ],
+            [
+              "星舟产品保修、退换与费用政策",
+              "标准保修"
+            ]
+          ]
+        },
+        {
+          "case_id": "x1-capacity",
+          "query": "小办公室每天 80 杯该选哪款，水箱容量是多少？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [
+              "星舟智能咖啡设备产品与服务目录",
+              "X1 标准版"
+            ],
+            [
+              "星舟智能咖啡设备产品与服务目录",
+              "X2 专业版"
+            ],
+            [
+              "星舟智能咖啡设备产品与服务目录",
+              "X2 Pro 企业版"
+            ],
+            [
+              "星舟智能咖啡设备产品与服务目录",
+              "服务包"
+            ],
+            [
+              "星舟智能咖啡设备产品与服务目录"
+            ]
+          ]
+        },
+        {
+          "case_id": "x1-cleaning",
+          "query": "X1 做多少杯会提醒深度清洁？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [
+              "星舟智能咖啡设备产品与服务目录",
+              "X1 标准版"
+            ],
+            [
+              "星舟智能咖啡设备产品与服务目录",
+              "X2 专业版"
+            ],
+            [
+              "星舟设备故障诊断手册",
+              "无错误码但咖啡温度偏低"
+            ],
+            [
+              "星舟设备故障诊断手册",
+              "E31 奶路清洗失败"
+            ],
+            [
+              "星舟智能咖啡设备产品与服务目录",
+              "X2 Pro 企业版"
+            ]
+          ]
+        },
+        {
+          "case_id": "x1-cleaning",
+          "query": "标准版咖啡机的深度清洁计数是多少？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [
+              "星舟智能咖啡设备产品与服务目录",
+              "X1 标准版"
+            ],
+            [
+              "星舟智能咖啡设备产品与服务目录",
+              "X2 专业版"
+            ],
+            [
+              "星舟设备故障诊断手册",
+              "无错误码但咖啡温度偏低"
+            ],
+            [
+              "星舟智能咖啡设备产品与服务目录"
+            ],
+            [
+              "星舟智能咖啡设备产品与服务目录",
+              "X2 Pro 企业版"
+            ]
+          ]
+        },
+        {
+          "case_id": "x1-features",
+          "query": "X1 支持双豆仓和自动奶路清洗吗？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [
+              "星舟智能咖啡设备产品与服务目录",
+              "X1 标准版"
+            ],
+            [
+              "星舟智能咖啡设备产品与服务目录",
+              "X2 Pro 企业版"
+            ],
+            [
+              "星舟智能咖啡设备产品与服务目录",
+              "X2 专业版"
+            ],
+            [
+              "星舟设备故障诊断手册",
+              "E31 奶路清洗失败"
+            ],
+            [
+              "星舟智能设备售后知识库治理说明",
+              "业务范围"
+            ]
+          ]
+        },
+        {
+          "case_id": "x1-features",
+          "query": "标准版有没有双豆仓、自动洗奶路？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [
+              "星舟智能咖啡设备产品与服务目录",
+              "X1 标准版"
+            ],
+            [
+              "星舟智能咖啡设备产品与服务目录",
+              "X2 Pro 企业版"
+            ],
+            [
+              "星舟智能咖啡设备产品与服务目录",
+              "X2 专业版"
+            ],
+            [
+              "星舟智能咖啡设备产品与服务目录"
+            ],
+            [
+              "星舟智能咖啡设备产品与服务目录",
+              "服务包"
+            ]
+          ]
+        },
+        {
+          "case_id": "x2-capacity",
+          "query": "X2 水箱容量和建议日杯量是多少？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [
+              "星舟智能咖啡设备产品与服务目录",
+              "X2 专业版"
+            ],
+            [
+              "星舟智能咖啡设备产品与服务目录",
+              "X1 标准版"
+            ],
+            [
+              "星舟智能咖啡设备产品与服务目录",
+              "X2 Pro 企业版"
+            ],
+            [
+              "星舟产品保修、退换与费用政策",
+              "标准保修"
+            ],
+            [
+              "星舟设备故障诊断手册",
+              "E17 供水异常"
+            ]
+          ]
+        },
+        {
+          "case_id": "x2-capacity",
+          "query": "中型办公区每天约 200 杯应该选什么容量？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [
+              "星舟智能咖啡设备产品与服务目录",
+              "X2 专业版"
+            ],
+            [
+              "星舟智能咖啡设备产品与服务目录",
+              "X1 标准版"
+            ],
+            [
+              "星舟智能咖啡设备产品与服务目录",
+              "X2 Pro 企业版"
+            ],
+            [
+              "星舟智能咖啡设备产品与服务目录"
+            ],
+            [
+              "星舟智能咖啡设备产品与服务目录",
+              "服务包"
+            ]
+          ]
+        },
+        {
+          "case_id": "x2-cleaning",
+          "query": "X2 累计多少杯提示深度清洁？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [
+              "星舟智能咖啡设备产品与服务目录",
+              "X2 专业版"
+            ],
+            [
+              "星舟智能咖啡设备产品与服务目录",
+              "X1 标准版"
+            ],
+            [
+              "星舟设备故障诊断手册",
+              "无错误码但咖啡温度偏低"
+            ],
+            [
+              "星舟智能咖啡设备产品与服务目录",
+              "X2 Pro 企业版"
+            ],
+            [
+              "星舟设备故障诊断手册",
+              "E31 奶路清洗失败"
+            ]
+          ]
+        },
+        {
+          "case_id": "x2-cleaning",
+          "query": "专业版的清洁提醒周期是多少杯？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [
+              "星舟智能咖啡设备产品与服务目录",
+              "X2 专业版"
+            ],
+            [
+              "星舟智能咖啡设备产品与服务目录",
+              "X1 标准版"
+            ],
+            [
+              "星舟智能咖啡设备产品与服务目录",
+              "服务包"
+            ],
+            [
+              "星舟企业客户标准问答",
+              "“我们忘记清洁导致故障，还能免费维修吗？”"
+            ],
+            [
+              "星舟设备故障诊断手册",
+              "E31 奶路清洗失败"
+            ]
+          ]
+        },
+        {
+          "case_id": "x2pro-water",
+          "query": "X2 Pro 是水箱还是直连进水，日杯量多少？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [
+              "星舟智能咖啡设备产品与服务目录",
+              "X2 Pro 企业版"
+            ],
+            [
+              "星舟智能咖啡设备产品与服务目录",
+              "X2 专业版"
+            ],
+            [
+              "星舟设备故障诊断手册",
+              "E17 供水异常"
+            ],
+            [
+              "星舟智能咖啡设备产品与服务目录",
+              "X1 标准版"
+            ],
+            [
+              "星舟产品保修、退换与费用政策",
+              "标准保修"
+            ]
+          ]
+        },
+        {
+          "case_id": "x2pro-water",
+          "query": "每天 500 杯的企业机型采用什么供水方式？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [
+              "星舟智能咖啡设备产品与服务目录",
+              "X2 Pro 企业版"
+            ],
+            [
+              "星舟智能咖啡设备产品与服务目录",
+              "X1 标准版"
+            ],
+            [
+              "星舟智能咖啡设备产品与服务目录",
+              "X2 专业版"
+            ],
+            [
+              "星舟设备故障诊断手册",
+              "E17 供水异常"
+            ],
+            [
+              "星舟智能咖啡设备产品与服务目录",
+              "服务包"
+            ]
+          ]
+        },
+        {
+          "case_id": "x2pro-install",
+          "query": "X2 Pro 首次安装可以自己做吗？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [
+              "星舟智能咖啡设备产品与服务目录",
+              "X2 Pro 企业版"
+            ],
+            [
+              "星舟智能设备售后知识库治理说明",
+              "业务范围"
+            ],
+            [
+              "星舟产品保修、退换与费用政策",
+              "标准保修"
+            ],
+            [
+              "星舟设备故障诊断手册"
+            ],
+            [
+              "星舟企业客户标准问答",
+              "“X2 报 E23，可以连续重启试试吗？”"
+            ]
+          ]
+        },
+        {
+          "case_id": "x2pro-install",
+          "query": "企业版第一次部署对安装方有什么要求？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [
+              "星舟智能咖啡设备产品与服务目录",
+              "X2 Pro 企业版"
+            ],
+            [
+              "星舟企业客户标准问答",
+              "“X2 报 E23，可以连续重启试试吗？”"
+            ],
+            [
+              "售后知识助手安全合规与权限边界"
+            ],
+            [
+              "售后知识助手安全合规与权限边界",
+              "权限与租户隔离"
+            ],
+            [
+              "星舟智能咖啡设备产品与服务目录",
+              "服务包"
+            ]
+          ]
+        },
+        {
+          "case_id": "enterprise-package",
+          "query": "企业服务包支持时段和巡检内容是什么？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [
+              "星舟智能咖啡设备产品与服务目录",
+              "服务包"
+            ],
+            [
+              "星舟售后工单分级与 SLA",
+              "P1 紧急事件"
+            ],
+            [
+              "星舟售后工单分级与 SLA"
+            ],
+            [
+              "售后知识助手安全合规与权限边界"
+            ],
+            [
+              "星舟企业客户标准问答",
+              "“我们忘记清洁导致故障，还能免费维修吗？”"
+            ]
+          ]
+        },
+        {
+          "case_id": "enterprise-package",
+          "query": "需要季度巡检应该购买哪个服务包，服务时间多长？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [
+              "星舟智能咖啡设备产品与服务目录",
+              "服务包"
+            ],
+            [
+              "星舟售后工单分级与 SLA"
+            ],
+            [
+              "星舟产品保修、退换与费用政策"
+            ],
+            [
+              "售后知识助手安全合规与权限边界"
+            ],
+            [
+              "星舟产品保修、退换与费用政策",
+              "标准保修"
+            ]
+          ]
+        },
+        {
+          "case_id": "premium-package",
+          "query": "哪个服务包有 7×24 P1 响应和备用机？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [
+              "星舟智能咖啡设备产品与服务目录",
+              "服务包"
+            ],
+            [
+              "星舟售后工单分级与 SLA",
+              "P1 紧急事件"
+            ],
+            [
+              "星舟售后工单分级与 SLA",
+              "P2 高优先级故障"
+            ],
+            [
+              "星舟售后工单分级与 SLA",
+              "升级与关闭"
+            ],
+            [
+              "星舟售后工单分级与 SLA",
+              "P3 一般问题"
+            ]
+          ]
+        },
+        {
+          "case_id": "premium-package",
+          "query": "全天紧急支持与备用机服务属于什么套餐？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [
+              "星舟智能咖啡设备产品与服务目录",
+              "服务包"
+            ],
+            [
+              "星舟产品保修、退换与费用政策",
+              "费用与赔付"
+            ],
+            [
+              "星舟产品保修、退换与费用政策",
+              "不在标准保修范围"
+            ],
+            [
+              "星舟售后工单分级与 SLA"
+            ],
+            [
+              "售后知识助手安全合规与权限边界"
+            ]
+          ]
+        },
+        {
+          "case_id": "e17-checks",
+          "query": "E17 首先要检查哪三项？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 0.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [
+              "星舟企业客户标准问答",
+              "“设备一直提示 E17，能直接换机吗？”"
+            ],
+            [
+              "星舟售后工单分级与 SLA",
+              "P2 高优先级故障"
+            ],
+            [
+              "星舟设备故障诊断手册",
+              "E17 供水异常"
+            ],
+            [
+              "星舟设备故障诊断手册",
+              "安全类异常"
+            ],
+            [
+              "星舟设备故障诊断手册"
+            ]
+          ]
+        },
+        {
+          "case_id": "e17-checks",
+          "query": "供水异常时水箱、滤芯和浮子分别怎么排查？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [
+              "星舟设备故障诊断手册",
+              "E17 供水异常"
+            ],
+            [
+              "星舟售后工单分级与 SLA",
+              "P2 高优先级故障"
+            ],
+            [
+              "星舟企业客户标准问答",
+              "“设备一直提示 E17，能直接换机吗？”"
+            ],
+            [
+              "星舟设备故障诊断手册",
+              "无错误码但咖啡温度偏低"
+            ],
+            [
+              "星舟设备故障诊断手册",
+              "E31 奶路清洗失败"
+            ]
+          ]
+        },
+        {
+          "case_id": "e17-escalation",
+          "query": "E17 检查后仍没恢复怎么建单？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 0.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [
+              "星舟企业客户标准问答",
+              "“设备一直提示 E17，能直接换机吗？”"
+            ],
+            [
+              "星舟售后工单分级与 SLA",
+              "P2 高优先级故障"
+            ],
+            [
+              "星舟设备故障诊断手册",
+              "E17 供水异常"
+            ],
+            [
+              "星舟售后工单分级与 SLA"
+            ],
+            [
+              "星舟企业客户标准问答",
+              "“X2 报 E23，可以连续重启试试吗？”"
+            ]
+          ]
+        },
+        {
+          "case_id": "e17-escalation",
+          "query": "供水故障重启无效后工单要带哪些现场资料？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [
+              "星舟设备故障诊断手册",
+              "E17 供水异常"
+            ],
+            [
+              "星舟智能设备售后知识库治理说明",
+              "内容优先级"
+            ],
+            [
+              "星舟企业客户标准问答",
+              "“设备一直提示 E17，能直接换机吗？”"
+            ],
+            [
+              "星舟售后工单分级与 SLA",
+              "建单必填信息"
+            ],
+            [
+              "星舟售后工单分级与 SLA"
+            ]
+          ]
+        },
+        {
+          "case_id": "e17-direct-water",
+          "query": "X2 Pro 出现 E17 还要检查什么？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 0.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [
+              "星舟企业客户标准问答",
+              "“设备一直提示 E17，能直接换机吗？”"
+            ],
+            [
+              "星舟设备故障诊断手册",
+              "E17 供水异常"
+            ],
+            [
+              "星舟设备故障诊断手册",
+              "E31 奶路清洗失败"
+            ],
+            [
+              "星舟设备故障诊断手册"
+            ],
+            [
+              "星舟智能设备售后知识库治理说明",
+              "业务范围"
+            ]
+          ]
+        },
+        {
+          "case_id": "e17-direct-water",
+          "query": "直连进水机型供水异常要看阀门和管路吗？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [
+              "星舟设备故障诊断手册",
+              "E17 供水异常"
+            ],
+            [
+              "星舟企业客户标准问答",
+              "“设备一直提示 E17，能直接换机吗？”"
+            ],
+            [
+              "星舟设备故障诊断手册",
+              "E31 奶路清洗失败"
+            ],
+            [
+              "星舟设备故障诊断手册",
+              "无错误码但咖啡温度偏低"
+            ],
+            [
+              "星舟设备故障诊断手册",
+              "安全类异常"
+            ]
+          ]
+        },
+        {
+          "case_id": "e23-first-action",
+          "query": "E23 过热后要停多久并清理哪里？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [
+              "星舟设备故障诊断手册",
+              "E23 研磨电机过热"
+            ],
+            [
+              "星舟企业客户标准问答",
+              "“X2 报 E23，可以连续重启试试吗？”"
+            ],
+            [
+              "星舟设备故障诊断手册",
+              "E31 奶路清洗失败"
+            ],
+            [
+              "星舟设备故障诊断手册",
+              "安全类异常"
+            ],
+            [
+              "星舟设备故障诊断手册",
+              "无错误码但咖啡温度偏低"
+            ]
+          ]
+        },
+        {
+          "case_id": "e23-first-action",
+          "query": "研磨电机过热停机后如何初步处理？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [
+              "星舟设备故障诊断手册",
+              "E23 研磨电机过热"
+            ],
+            [
+              "星舟企业客户标准问答",
+              "“X2 报 E23，可以连续重启试试吗？”"
+            ],
+            [
+              "星舟设备故障诊断手册",
+              "安全类异常"
+            ],
+            [
+              "星舟设备故障诊断手册",
+              "无错误码但咖啡温度偏低"
+            ],
+            [
+              "星舟企业客户标准问答",
+              "“设备一直提示 E17，能直接换机吗？”"
+            ]
+          ]
+        },
+        {
+          "case_id": "e23-tool-safety",
+          "query": "处理 E23 能用金属工具伸进研磨组件吗？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [
+              "星舟设备故障诊断手册",
+              "E23 研磨电机过热"
+            ],
+            [
+              "星舟企业客户标准问答",
+              "“X2 报 E23，可以连续重启试试吗？”"
+            ],
+            [
+              "星舟产品保修、退换与费用政策",
+              "标准保修"
+            ],
+            [
+              "星舟设备故障诊断手册",
+              "E31 奶路清洗失败"
+            ],
+            [
+              "星舟设备故障诊断手册"
+            ]
+          ]
+        },
+        {
+          "case_id": "e23-tool-safety",
+          "query": "研磨组件卡住时哪些清理方式被禁止？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [
+              "星舟企业客户标准问答",
+              "“X2 报 E23，可以连续重启试试吗？”"
+            ],
+            [
+              "星舟设备故障诊断手册",
+              "E23 研磨电机过热"
+            ],
+            [
+              "星舟产品保修、退换与费用政策",
+              "标准保修"
+            ],
+            [
+              "星舟设备故障诊断手册",
+              "E31 奶路清洗失败"
+            ],
+            [
+              "星舟智能设备售后知识库治理说明",
+              "内容优先级"
+            ]
+          ]
+        },
+        {
+          "case_id": "e23-escalation",
+          "query": "E23 等待后还出现，工单级别和响应时间是什么？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 0.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [
+              "星舟售后工单分级与 SLA",
+              "P1 紧急事件"
+            ],
+            [
+              "星舟设备故障诊断手册",
+              "E23 研磨电机过热"
+            ],
+            [
+              "星舟售后工单分级与 SLA"
+            ],
+            [
+              "星舟售后工单分级与 SLA",
+              "P2 高优先级故障"
+            ],
+            [
+              "星舟企业客户标准问答",
+              "“X2 报 E23，可以连续重启试试吗？”"
+            ]
+          ]
+        },
+        {
+          "case_id": "e23-escalation",
+          "query": "研磨电机过热没有恢复要多快响应？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [
+              "星舟设备故障诊断手册",
+              "E23 研磨电机过热"
+            ],
+            [
+              "星舟企业客户标准问答",
+              "“X2 报 E23，可以连续重启试试吗？”"
+            ],
+            [
+              "星舟产品保修、退换与费用政策",
+              "标准保修"
+            ],
+            [
+              "星舟设备故障诊断手册",
+              "无错误码但咖啡温度偏低"
+            ],
+            [
+              "星舟设备故障诊断手册",
+              "安全类异常"
+            ]
+          ]
+        },
+        {
+          "case_id": "e31-checks",
+          "query": "E31 奶路清洗失败要检查什么？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [
+              "星舟设备故障诊断手册",
+              "E31 奶路清洗失败"
+            ],
+            [
+              "星舟售后工单分级与 SLA",
+              "P2 高优先级故障"
+            ],
+            [
+              "星舟设备故障诊断手册",
+              "E17 供水异常"
+            ],
+            [
+              "星舟企业客户标准问答",
+              "“X2 报 E23，可以连续重启试试吗？”"
+            ],
+            [
+              "星舟设备故障诊断手册",
+              "无错误码但咖啡温度偏低"
+            ]
+          ]
+        },
+        {
+          "case_id": "e31-checks",
+          "query": "奶路清洗异常对清洗液和奶管有什么要求？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [
+              "星舟设备故障诊断手册",
+              "E31 奶路清洗失败"
+            ],
+            [
+              "星舟设备故障诊断手册",
+              "E17 供水异常"
+            ],
+            [
+              "星舟设备故障诊断手册",
+              "无错误码但咖啡温度偏低"
+            ],
+            [
+              "星舟企业客户标准问答",
+              "“X2 报 E23，可以连续重启试试吗？”"
+            ]
+          ]
+        },
+        {
+          "case_id": "e31-escalation",
+          "query": "E31 连续失败几次后建什么工单？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [
+              "星舟设备故障诊断手册",
+              "E31 奶路清洗失败"
+            ],
+            [
+              "星舟售后工单分级与 SLA",
+              "P2 高优先级故障"
+            ],
+            [
+              "星舟企业客户标准问答",
+              "“X2 报 E23，可以连续重启试试吗？”"
+            ],
+            [
+              "星舟售后工单分级与 SLA"
+            ],
+            [
+              "星舟售后工单分级与 SLA",
+              "升级与关闭"
+            ]
+          ]
+        },
+        {
+          "case_id": "e31-escalation",
+          "query": "完整清洗程序重复失败后如何升级？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [
+              "星舟设备故障诊断手册",
+              "E31 奶路清洗失败"
+            ],
+            [
+              "星舟企业客户标准问答",
+              "“X2 报 E23，可以连续重启试试吗？”"
+            ],
+            [
+              "星舟企业客户标准问答",
+              "“设备一直提示 E17，能直接换机吗？”"
+            ],
+            [
+              "星舟设备故障诊断手册",
+              "E17 供水异常"
+            ],
+            [
+              "星舟售后工单分级与 SLA",
+              "升级与关闭"
+            ]
+          ]
+        },
+        {
+          "case_id": "low-temperature",
+          "query": "咖啡温度偏低，深度清洁后仍异常怎么办？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [
+              "星舟设备故障诊断手册",
+              "无错误码但咖啡温度偏低"
+            ],
+            [
+              "星舟智能咖啡设备产品与服务目录",
+              "X2 专业版"
+            ],
+            [
+              "星舟智能咖啡设备产品与服务目录",
+              "X1 标准版"
+            ],
+            [
+              "星舟设备故障诊断手册",
+              "E31 奶路清洗失败"
+            ],
+            [
+              "星舟企业客户标准问答",
+              "“X2 报 E23，可以连续重启试试吗？”"
+            ]
+          ]
+        },
+        {
+          "case_id": "low-temperature",
+          "query": "无错误码但出杯温度不达标应建哪级工单？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [
+              "星舟设备故障诊断手册",
+              "无错误码但咖啡温度偏低"
+            ],
+            [
+              "星舟售后工单分级与 SLA"
+            ],
+            [
+              "星舟设备故障诊断手册",
+              "E17 供水异常"
+            ],
+            [
+              "星舟企业客户标准问答",
+              "“设备一直提示 E17，能直接换机吗？”"
+            ],
+            [
+              "星舟设备故障诊断手册",
+              "E31 奶路清洗失败"
+            ]
+          ]
+        },
+        {
+          "case_id": "safety-anomaly",
+          "query": "机器冒烟或漏电时第一步怎么做？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [
+              "星舟设备故障诊断手册",
+              "安全类异常"
+            ],
+            [
+              "星舟智能设备售后知识库治理说明",
+              "回答规则"
+            ],
+            [
+              "星舟智能设备售后知识库治理说明",
+              "内容优先级"
+            ]
+          ]
+        },
+        {
+          "case_id": "safety-anomaly",
+          "query": "液体进入机身后可以再次通电拍视频吗？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [
+              "星舟设备故障诊断手册",
+              "安全类异常"
+            ],
+            [
+              "星舟智能设备售后知识库治理说明",
+              "回答规则"
+            ],
+            [
+              "星舟企业客户标准问答",
+              "“设备一直提示 E17，能直接换机吗？”"
+            ],
+            [
+              "星舟企业客户标准问答",
+              "“X2 报 E23，可以连续重启试试吗？”"
+            ],
+            [
+              "星舟产品保修、退换与费用政策",
+              "不在标准保修范围"
+            ]
+          ]
+        },
+        {
+          "case_id": "p1-sla",
+          "query": "P1 首次响应和处置方案时限是多少？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 0.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [
+              "星舟售后工单分级与 SLA",
+              "P2 高优先级故障"
+            ],
+            [
+              "星舟售后工单分级与 SLA",
+              "P1 紧急事件"
+            ],
+            [
+              "星舟售后工单分级与 SLA",
+              "P3 一般问题"
+            ],
+            [
+              "星舟智能咖啡设备产品与服务目录",
+              "服务包"
+            ],
+            [
+              "星舟售后工单分级与 SLA",
+              "升级与关闭"
+            ]
+          ]
+        },
+        {
+          "case_id": "p1-sla",
+          "query": "紧急事件一小时响应后多久给方案？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [
+              "星舟售后工单分级与 SLA",
+              "P1 紧急事件"
+            ],
+            [
+              "星舟售后工单分级与 SLA",
+              "P2 高优先级故障"
+            ],
+            [
+              "星舟智能咖啡设备产品与服务目录",
+              "服务包"
+            ],
+            [
+              "星舟售后工单分级与 SLA"
+            ],
+            [
+              "星舟售后工单分级与 SLA",
+              "P3 一般问题"
+            ]
+          ]
+        },
+        {
+          "case_id": "p2-sla",
+          "query": "P2 的响应和处置时限是什么？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [
+              "星舟售后工单分级与 SLA",
+              "P2 高优先级故障"
+            ],
+            [
+              "星舟售后工单分级与 SLA",
+              "P1 紧急事件"
+            ],
+            [
+              "星舟售后工单分级与 SLA",
+              "P3 一般问题"
+            ],
+            [
+              "星舟售后工单分级与 SLA",
+              "升级与关闭"
+            ],
+            [
+              "星舟企业客户标准问答",
+              "“X2 报 E23，可以连续重启试试吗？”"
+            ]
+          ]
+        },
+        {
+          "case_id": "p2-sla",
+          "query": "高优先级故障多久联系、多久出方案？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [
+              "星舟售后工单分级与 SLA",
+              "P2 高优先级故障"
+            ],
+            [
+              "星舟智能设备售后知识库治理说明",
+              "内容优先级"
+            ],
+            [
+              "星舟售后工单分级与 SLA"
+            ],
+            [
+              "星舟售后工单分级与 SLA",
+              "P3 一般问题"
+            ],
+            [
+              "星舟售后工单分级与 SLA",
+              "P1 紧急事件"
+            ]
+          ]
+        },
+        {
+          "case_id": "p3-sla",
+          "query": "P3 工单多久响应和解决？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [
+              "星舟售后工单分级与 SLA",
+              "P3 一般问题"
+            ],
+            [
+              "星舟售后工单分级与 SLA",
+              "P1 紧急事件"
+            ],
+            [
+              "星舟售后工单分级与 SLA",
+              "P2 高优先级故障"
+            ],
+            [
+              "星舟智能咖啡设备产品与服务目录",
+              "服务包"
+            ],
+            [
+              "星舟设备故障诊断手册",
+              "E23 研磨电机过热"
+            ]
+          ]
+        },
+        {
+          "case_id": "p3-sla",
+          "query": "一般问题的首次响应及处置方案时限是多少？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [
+              "星舟售后工单分级与 SLA",
+              "P3 一般问题"
+            ],
+            [
+              "星舟售后工单分级与 SLA",
+              "P1 紧急事件"
+            ],
+            [
+              "星舟售后工单分级与 SLA",
+              "P2 高优先级故障"
+            ],
+            [
+              "星舟智能设备售后知识库治理说明",
+              "内容优先级"
+            ],
+            [
+              "星舟售后工单分级与 SLA",
+              "升级与关闭"
+            ]
+          ]
+        },
+        {
+          "case_id": "repeat-upgrade",
+          "query": "同一故障七天内重复两次怎么处理？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [
+              "星舟售后工单分级与 SLA",
+              "升级与关闭"
+            ],
+            [
+              "星舟智能设备售后知识库治理说明",
+              "内容优先级"
+            ],
+            [
+              "星舟企业客户标准问答",
+              "“X2 报 E23，可以连续重启试试吗？”"
+            ],
+            [
+              "星舟设备故障诊断手册",
+              "安全类异常"
+            ],
+            [
+              "星舟售后工单分级与 SLA"
+            ]
+          ]
+        },
+        {
+          "case_id": "repeat-upgrade",
+          "query": "短期重复故障什么时候自动升级？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [
+              "星舟售后工单分级与 SLA",
+              "升级与关闭"
+            ],
+            [
+              "星舟售后工单分级与 SLA"
+            ],
+            [
+              "星舟企业客户标准问答",
+              "“X2 报 E23，可以连续重启试试吗？”"
+            ],
+            [
+              "星舟智能设备售后知识库治理说明",
+              "内容优先级"
+            ],
+            [
+              "星舟售后工单分级与 SLA",
+              "P2 高优先级故障"
+            ]
+          ]
+        },
+        {
+          "case_id": "p1-close",
+          "query": "用户一直不回复，可以直接关闭 P1 吗？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [
+              "星舟售后工单分级与 SLA",
+              "升级与关闭"
+            ],
+            [
+              "星舟企业客户标准问答",
+              "“智能助手可以直接批准退款吗？”"
+            ],
+            [
+              "星舟企业客户标准问答",
+              "“X2 报 E23，可以连续重启试试吗？”"
+            ],
+            [
+              "星舟企业客户标准问答",
+              "“设备一直提示 E17，能直接换机吗？”"
+            ],
+            [
+              "星舟智能设备售后知识库治理说明",
+              "回答规则"
+            ]
+          ]
+        },
+        {
+          "case_id": "p1-close",
+          "query": "紧急工单失联后满足什么条件才能关闭？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [
+              "星舟售后工单分级与 SLA",
+              "升级与关闭"
+            ],
+            [
+              "星舟售后工单分级与 SLA"
+            ],
+            [
+              "星舟售后工单分级与 SLA",
+              "P1 紧急事件"
+            ],
+            [
+              "星舟企业客户标准问答",
+              "“X2 报 E23，可以连续重启试试吗？”"
+            ],
+            [
+              "星舟售后工单分级与 SLA",
+              "P2 高优先级故障"
+            ]
+          ]
+        },
+        {
+          "case_id": "x1-warranty",
+          "query": "X1 整机和研磨组件各保修几年？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [
+              "星舟产品保修、退换与费用政策",
+              "标准保修"
+            ],
+            [
+              "星舟企业客户标准问答",
+              "“X2 报 E23，可以连续重启试试吗？”"
+            ],
+            [
+              "星舟设备故障诊断手册",
+              "E23 研磨电机过热"
+            ],
+            [
+              "星舟产品保修、退换与费用政策"
+            ],
+            [
+              "星舟产品保修、退换与费用政策",
+              "不在标准保修范围"
+            ]
+          ]
+        },
+        {
+          "case_id": "x1-warranty",
+          "query": "标准版主机与研磨部件的保修期分别多长？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [
+              "星舟产品保修、退换与费用政策",
+              "标准保修"
+            ],
+            [
+              "星舟产品保修、退换与费用政策"
+            ],
+            [
+              "星舟产品保修、退换与费用政策",
+              "不在标准保修范围"
+            ],
+            [
+              "星舟企业客户标准问答",
+              "“我们忘记清洁导致故障，还能免费维修吗？”"
+            ],
+            [
+              "星舟智能咖啡设备产品与服务目录",
+              "服务包"
+            ]
+          ]
+        },
+        {
+          "case_id": "x2pro-warranty",
+          "query": "X2 Pro 整机和核心泵组保修多久？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [
+              "星舟产品保修、退换与费用政策",
+              "标准保修"
+            ],
+            [
+              "星舟智能设备售后知识库治理说明",
+              "业务范围"
+            ],
+            [
+              "星舟产品保修、退换与费用政策"
+            ],
+            [
+              "星舟产品保修、退换与费用政策",
+              "不在标准保修范围"
+            ],
+            [
+              "星舟智能咖啡设备产品与服务目录",
+              "服务包"
+            ]
+          ]
+        },
+        {
+          "case_id": "x2pro-warranty",
+          "query": "企业版咖啡机核心泵组有几年质保？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [
+              "星舟产品保修、退换与费用政策",
+              "标准保修"
+            ],
+            [
+              "星舟智能咖啡设备产品与服务目录",
+              "X2 Pro 企业版"
+            ],
+            [
+              "星舟智能咖啡设备产品与服务目录",
+              "服务包"
+            ],
+            [
+              "星舟智能咖啡设备产品与服务目录"
+            ],
+            [
+              "星舟企业客户标准问答",
+              "“设备一直提示 E17，能直接换机吗？”"
+            ]
+          ]
+        },
+        {
+          "case_id": "warranty-exclusion",
+          "query": "客户私自拆机后还能直接认定免费保修吗？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [
+              "星舟产品保修、退换与费用政策",
+              "不在标准保修范围"
+            ],
+            [
+              "星舟企业客户标准问答",
+              "“我们忘记清洁导致故障，还能免费维修吗？”"
+            ],
+            [
+              "星舟企业客户标准问答",
+              "“设备一直提示 E17，能直接换机吗？”"
+            ],
+            [
+              "星舟产品保修、退换与费用政策",
+              "费用与赔付"
+            ],
+            [
+              "星舟产品保修、退换与费用政策",
+              "到货与退换"
+            ]
+          ]
+        },
+        {
+          "case_id": "warranty-exclusion",
+          "query": "人为损坏由谁认定，私拆是否在标准保修内？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [
+              "星舟产品保修、退换与费用政策",
+              "不在标准保修范围"
+            ],
+            [
+              "星舟企业客户标准问答",
+              "“我们忘记清洁导致故障，还能免费维修吗？”"
+            ],
+            [
+              "星舟产品保修、退换与费用政策",
+              "费用与赔付"
+            ],
+            [
+              "星舟产品保修、退换与费用政策",
+              "到货与退换"
+            ],
+            [
+              "星舟智能设备售后知识库治理说明",
+              "内容优先级"
+            ]
+          ]
+        },
+        {
+          "case_id": "arrival-damage",
+          "query": "到货破损最迟几天发现、几小时提交照片？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [
+              "星舟产品保修、退换与费用政策",
+              "到货与退换"
+            ],
+            [
+              "星舟产品保修、退换与费用政策",
+              "不在标准保修范围"
+            ],
+            [
+              "星舟售后工单分级与 SLA"
+            ],
+            [
+              "星舟产品保修、退换与费用政策"
+            ],
+            [
+              "星舟设备故障诊断手册",
+              "安全类异常"
+            ]
+          ]
+        },
+        {
+          "case_id": "arrival-damage",
+          "query": "运输损坏的申报窗口和材料时限是什么？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [
+              "星舟产品保修、退换与费用政策",
+              "到货与退换"
+            ],
+            [
+              "星舟产品保修、退换与费用政策",
+              "不在标准保修范围"
+            ],
+            [
+              "星舟产品保修、退换与费用政策"
+            ],
+            [
+              "星舟售后工单分级与 SLA"
+            ],
+            [
+              "星舟产品保修、退换与费用政策",
+              "费用与赔付"
+            ]
+          ]
+        },
+        {
+          "case_id": "no-reason-return",
+          "query": "企业设备安装验收后还能无理由退货吗？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [
+              "星舟产品保修、退换与费用政策",
+              "到货与退换"
+            ],
+            [
+              "星舟产品保修、退换与费用政策"
+            ],
+            [
+              "星舟产品保修、退换与费用政策",
+              "不在标准保修范围"
+            ],
+            [
+              "星舟企业客户标准问答",
+              "“我们忘记清洁导致故障，还能免费维修吗？”"
+            ],
+            [
+              "星舟企业客户标准问答",
+              "“设备一直提示 E17，能直接换机吗？”"
+            ]
+          ]
+        },
+        {
+          "case_id": "no-reason-return",
+          "query": "已经完成安装验收，合同没特殊约定能否七天无理由？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [
+              "星舟产品保修、退换与费用政策",
+              "到货与退换"
+            ],
+            [
+              "星舟产品保修、退换与费用政策",
+              "不在标准保修范围"
+            ],
+            [
+              "星舟产品保修、退换与费用政策"
+            ],
+            [
+              "星舟企业客户标准问答",
+              "“我们忘记清洁导致故障，还能免费维修吗？”"
+            ],
+            [
+              "星舟产品保修、退换与费用政策",
+              "费用与赔付"
+            ]
+          ]
+        },
+        {
+          "case_id": "refund-approval",
+          "query": "智能助手可以直接批准退款和费用减免吗？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 0.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [
+              "星舟企业客户标准问答",
+              "“智能助手可以直接批准退款吗？”"
+            ],
+            [
+              "售后知识助手安全合规与权限边界",
+              "智能助手不得执行的事项"
+            ],
+            [
+              "星舟产品保修、退换与费用政策",
+              "费用与赔付"
+            ],
+            [
+              "星舟产品保修、退换与费用政策",
+              "不在标准保修范围"
+            ],
+            [
+              "售后知识助手安全合规与权限边界"
+            ]
+          ]
+        },
+        {
+          "case_id": "refund-approval",
+          "query": "换机赔付由机器人决定还是需要人工？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [
+              "星舟产品保修、退换与费用政策",
+              "费用与赔付"
+            ],
+            [
+              "星舟企业客户标准问答",
+              "“智能助手可以直接批准退款吗？”"
+            ],
+            [
+              "星舟产品保修、退换与费用政策",
+              "不在标准保修范围"
+            ],
+            [
+              "星舟企业客户标准问答",
+              "“设备一直提示 E17，能直接换机吗？”"
+            ],
+            [
+              "售后知识助手安全合规与权限边界",
+              "智能助手不得执行的事项"
+            ]
+          ]
+        },
+        {
+          "case_id": "tenant-isolation",
+          "query": "A 公司员工能搜索 B 公司内部资料吗？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [
+              "售后知识助手安全合规与权限边界",
+              "权限与租户隔离"
+            ],
+            [
+              "售后知识助手安全合规与权限边界",
+              "文档内提示注入防护"
+            ],
+            [
+              "售后知识助手安全合规与权限边界"
+            ],
+            [
+              "星舟企业客户标准问答",
+              "“资料里没有写的参数能不能估算？”"
+            ]
+          ]
+        },
+        {
+          "case_id": "tenant-isolation",
+          "query": "租户名称很相似时允许跨企业查询吗？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [
+              "售后知识助手安全合规与权限边界",
+              "权限与租户隔离"
+            ],
+            [
+              "售后知识助手安全合规与权限边界",
+              "数据最小化"
+            ],
+            [
+              "售后知识助手安全合规与权限边界"
+            ],
+            [
+              "星舟企业客户标准问答",
+              "“资料里没有写的参数能不能估算？”"
+            ],
+            [
+              "星舟企业客户标准问答",
+              "“智能助手可以直接批准退款吗？”"
+            ]
+          ]
+        },
+        {
+          "case_id": "prompt-injection",
+          "query": "资料里写着忽略系统规则，助手应该照做吗？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [
+              "售后知识助手安全合规与权限边界",
+              "文档内提示注入防护"
+            ],
+            [
+              "售后知识助手安全合规与权限边界",
+              "智能助手不得执行的事项"
+            ],
+            [
+              "星舟企业客户标准问答",
+              "“智能助手可以直接批准退款吗？”"
+            ],
+            [
+              "星舟智能设备售后知识库治理说明",
+              "内容优先级"
+            ],
+            [
+              "星舟企业客户标准问答",
+              "“资料里没有写的参数能不能估算？”"
+            ]
+          ]
+        },
+        {
+          "case_id": "prompt-injection",
+          "query": "知识库附件中的删除工具指令可以执行吗？",
+          "required_evidence_units": 1,
+          "evidence_retention": 1.0,
+          "recall_at_1": 1.0,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [
+              "售后知识助手安全合规与权限边界",
+              "文档内提示注入防护"
+            ],
+            [
+              "售后知识助手安全合规与权限边界",
+              "权限与租户隔离"
+            ],
+            [
+              "售后知识助手安全合规与权限边界",
+              "智能助手不得执行的事项"
+            ],
+            [
+              "星舟企业客户标准问答",
+              "“智能助手可以直接批准退款吗？”"
+            ],
+            [
+              "售后知识助手安全合规与权限边界",
+              "审计要求"
+            ]
+          ]
+        },
+        {
+          "case_id": "e17-cross-section",
+          "query": "E17 完成检查仍失败，要建哪级工单且多久首次响应？",
+          "required_evidence_units": 2,
+          "evidence_retention": 1.0,
+          "recall_at_1": 0.5,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [
+              "星舟售后工单分级与 SLA",
+              "P2 高优先级故障"
+            ],
+            [
+              "星舟企业客户标准问答",
+              "“设备一直提示 E17，能直接换机吗？”"
+            ],
+            [
+              "星舟售后工单分级与 SLA",
+              "P3 一般问题"
+            ],
+            [
+              "星舟售后工单分级与 SLA",
+              "P1 紧急事件"
+            ],
+            [
+              "星舟设备故障诊断手册",
+              "E17 供水异常"
+            ]
+          ]
+        },
+        {
+          "case_id": "e17-cross-section",
+          "query": "供水异常无法恢复后的升级等级和 SLA 是什么？",
+          "required_evidence_units": 2,
+          "evidence_retention": 1.0,
+          "recall_at_1": 0.5,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [
+              "星舟设备故障诊断手册",
+              "E17 供水异常"
+            ],
+            [
+              "星舟售后工单分级与 SLA",
+              "升级与关闭"
+            ],
+            [
+              "星舟售后工单分级与 SLA",
+              "P2 高优先级故障"
+            ],
+            [
+              "星舟售后工单分级与 SLA"
+            ],
+            [
+              "星舟售后工单分级与 SLA",
+              "P1 紧急事件"
+            ]
+          ]
+        },
+        {
+          "case_id": "safety-cross-section",
+          "query": "设备冒烟时怎么处置，相关工具调用还要记录哪些审计字段？",
+          "required_evidence_units": 2,
+          "evidence_retention": 1.0,
+          "recall_at_1": 0.5,
+          "recall_at_3": 1.0,
+          "recall_at_5": 1.0,
+          "recall_at_10": 1.0,
+          "top_sections": [
+            [
+              "售后知识助手安全合规与权限边界",
+              "审计要求"
+            ],
+            [
+              "星舟设备故障诊断手册",
+              "安全类异常"
+            ],
+            [
+              "星舟智能设备售后知识库治理说明",
+              "内容优先级"
+            ],
+            [
+              "星舟智能设备售后知识库治理说明",
+              "回答规则"
+            ],
+            [
+              "售后知识助手安全合规与权限边界",
+              "文档内提示注入防护"
+            ]
+          ]
+        },
+        {
+          "case_id": "safety-cross-section",
+          "query": "安全事故建单后，系统审计至少记录什么？",
+          "required_evidence_units": 2,
+          "evidence_retention": 1.0,
+          "recall_at_1": 0.5,
+          "recall_at_3": 0.5,
+          "recall_at_5": 0.5,
+          "recall_at_10": 0.5,
+          "top_sections": [
+            [
+              "售后知识助手安全合规与权限边界",
+              "审计要求"
+            ],
+            [
+              "售后知识助手安全合规与权限边界"
+            ],
+            [
+              "售后知识助手安全合规与权限边界",
+              "数据最小化"
+            ],
+            [
+              "星舟售后工单分级与 SLA",
+              "建单必填信息"
+            ],
+            [
+              "星舟智能设备售后知识库治理说明",
+              "内容优先级"
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "delta_percentage_points": {
+    "recall_at_1": 18.39,
+    "recall_at_3": 3.67,
+    "recall_at_5": 2.2,
+    "recall_at_10": 2.2
+  },
+  "paired_bootstrap_95_ci_percentage_points": {
+    "recall_at_1": {
+      "lower": 5.15,
+      "upper": 31.62
+    },
+    "recall_at_3": {
+      "lower": -0.74,
+      "upper": 8.82
+    },
+    "recall_at_5": {
+      "lower": -1.47,
+      "upper": 6.62
+    },
+    "recall_at_10": {
+      "lower": -1.47,
+      "upper": 6.62
+    }
+  }
+}

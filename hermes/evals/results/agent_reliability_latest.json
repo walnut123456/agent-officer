@@ -1,0 +1,33 @@
+{
+  "benchmark_type": "deterministic fault-injection replay",
+  "case_count": 400,
+  "cases_per_scenario": 100,
+  "metrics": {
+    "loop_interception_rate": 1.0,
+    "legitimate_call_completion_rate": 1.0,
+    "false_breaker_rate": 0.0,
+    "tool_failure_containment_rate": 1.0,
+    "max_step_enforcement_rate": 1.0,
+    "max_duplicate_side_effects_per_trace": 2,
+    "fingerprint_order_invariance_rate": 1.0
+  },
+  "latency_ms": {
+    "loop_intercepted": {
+      "p50": 9.68,
+      "p95": 12.39
+    },
+    "legitimate_completed": {
+      "p50": 18.22,
+      "p95": 28.67
+    },
+    "failure_contained": {
+      "p50": 4.25,
+      "p95": 5.8
+    },
+    "budget_enforced": {
+      "p50": 37.12,
+      "p95": 45.15
+    }
+  },
+  "fingerprint_permutations": 24
+}

@@ -1,0 +1,11 @@
+[
+  {"id": "exact-error-code", "query": "设备出现 E17 错误码怎么处理？", "expected_title": "02_故障诊断手册.md", "kind": "exact"},
+  {"id": "semantic-overheat", "query": "机器运行一阵子过热并且自己停了，我应该先排查什么？", "expected_title": "02_故障诊断手册.md", "kind": "semantic"},
+  {"id": "exact-sla", "query": "生产完全中断的严重故障多久响应？", "expected_title": "03_售后工单与SLA.md", "kind": "exact"},
+  {"id": "semantic-warranty", "query": "客户自己拆过机器，还能免费维修吗？", "expected_title": "04_保修退换与费用政策.md", "kind": "semantic"},
+  {"id": "semantic-approval", "query": "智能助手可以不经人工直接同意退款吗？", "expected_title": "05_安全合规与智能助手边界.md", "kind": "semantic"},
+  {"id": "exact-product", "query": "X2 Pro 支持哪些工业协议？", "expected_title": "01_产品与服务目录.md", "kind": "exact"},
+  {"id": "semantic-isolation", "query": "A公司的员工会不会搜到B公司的内部资料？", "expected_title": "05_安全合规与智能助手边界.md", "kind": "semantic"},
+  {"id": "negative-holiday", "query": "公司春节放假安排是什么？", "expected_title": null, "kind": "negative"},
+  {"id": "negative-canteen", "query": "今天员工食堂午餐吃什么？", "expected_title": null, "kind": "negative"}
+]

@@ -1,0 +1,304 @@
+{
+  "dataset": "enterprise_kb_retrieval.json",
+  "positive_cases": 7,
+  "negative_cases": 2,
+  "controlled_variables": {
+    "embedding_model": "Embedding-3",
+    "dense_threshold": 0.38,
+    "lexical_weight": 0.35,
+    "dense_weight": 0.65,
+    "top_k": 5,
+    "max_size": 700,
+    "overlap": 100
+  },
+  "metric_note": "Each positive query has one relevant document label, so binary HitRate@K equals Recall@K. Evidence-level multi-relevance qrels are required to distinguish them.",
+  "strategies": {
+    "fixed_window": {
+      "chunk_count": 7,
+      "hit_rate_at_1": 0.7143,
+      "hit_rate_at_3": 1.0,
+      "hit_rate_at_5": 1.0,
+      "recall_at_1": 0.7143,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr_at_5": 0.8571,
+      "top1_document_accuracy": 0.7143,
+      "section_citation_accuracy": 0.0,
+      "negative_rejection_accuracy": 1.0,
+      "average_top1_context_tokens": 445.57,
+      "average_top3_context_tokens": 1128.57,
+      "cases": [
+        {
+          "id": "exact-error-code",
+          "kind": "exact",
+          "expected_title": "02_故障诊断手册.md",
+          "rank": 1,
+          "top1_title": "02_故障诊断手册.md",
+          "top1_section_path": [],
+          "top1_context_tokens": 477,
+          "top3_context_tokens": 1420,
+          "section_correct": false,
+          "rejected": false
+        },
+        {
+          "id": "semantic-overheat",
+          "kind": "semantic",
+          "expected_title": "02_故障诊断手册.md",
+          "rank": 1,
+          "top1_title": "02_故障诊断手册.md",
+          "top1_section_path": [],
+          "top1_context_tokens": 477,
+          "top3_context_tokens": 876,
+          "section_correct": false,
+          "rejected": false
+        },
+        {
+          "id": "exact-sla",
+          "kind": "exact",
+          "expected_title": "03_售后工单与SLA.md",
+          "rank": 1,
+          "top1_title": "03_售后工单与SLA.md",
+          "top1_section_path": [],
+          "top1_context_tokens": 476,
+          "top3_context_tokens": 1356,
+          "section_correct": false,
+          "rejected": false
+        },
+        {
+          "id": "semantic-warranty",
+          "kind": "semantic",
+          "expected_title": "04_保修退换与费用政策.md",
+          "rank": 2,
+          "top1_title": "06_客服标准问答.md",
+          "top1_section_path": [],
+          "top1_context_tokens": 399,
+          "top3_context_tokens": 1208,
+          "section_correct": false,
+          "rejected": false
+        },
+        {
+          "id": "semantic-approval",
+          "kind": "semantic",
+          "expected_title": "05_安全合规与智能助手边界.md",
+          "rank": 2,
+          "top1_title": "06_客服标准问答.md",
+          "top1_section_path": [],
+          "top1_context_tokens": 399,
+          "top3_context_tokens": 1269,
+          "section_correct": false,
+          "rejected": false
+        },
+        {
+          "id": "exact-product",
+          "kind": "exact",
+          "expected_title": "01_产品与服务目录.md",
+          "rank": 1,
+          "top1_title": "01_产品与服务目录.md",
+          "top1_section_path": [],
+          "top1_context_tokens": 424,
+          "top3_context_tokens": 1304,
+          "section_correct": false,
+          "rejected": false
+        },
+        {
+          "id": "semantic-isolation",
+          "kind": "semantic",
+          "expected_title": "05_安全合规与智能助手边界.md",
+          "rank": 1,
+          "top1_title": "05_安全合规与智能助手边界.md",
+          "top1_section_path": [],
+          "top1_context_tokens": 467,
+          "top3_context_tokens": 467,
+          "section_correct": false,
+          "rejected": false
+        },
+        {
+          "id": "negative-holiday",
+          "kind": "negative",
+          "expected_title": null,
+          "rank": null,
+          "top1_title": null,
+          "top1_section_path": [],
+          "top1_context_tokens": 0,
+          "top3_context_tokens": 0,
+          "section_correct": false,
+          "rejected": true
+        },
+        {
+          "id": "negative-canteen",
+          "kind": "negative",
+          "expected_title": null,
+          "rank": null,
+          "top1_title": null,
+          "top1_section_path": [],
+          "top1_context_tokens": 0,
+          "top3_context_tokens": 0,
+          "section_correct": false,
+          "rejected": true
+        }
+      ]
+    },
+    "structure_token": {
+      "chunk_count": 37,
+      "hit_rate_at_1": 0.7143,
+      "hit_rate_at_3": 1.0,
+      "hit_rate_at_5": 1.0,
+      "recall_at_1": 0.7143,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "mrr_at_5": 0.8571,
+      "top1_document_accuracy": 0.7143,
+      "section_citation_accuracy": 0.8571,
+      "negative_rejection_accuracy": 1.0,
+      "average_top1_context_tokens": 102.14,
+      "average_top3_context_tokens": 290.43,
+      "cases": [
+        {
+          "id": "exact-error-code",
+          "kind": "exact",
+          "expected_title": "02_故障诊断手册.md",
+          "rank": 1,
+          "top1_title": "02_故障诊断手册.md",
+          "top1_section_path": [
+            "星舟设备故障诊断手册",
+            "无错误码但咖啡温度偏低"
+          ],
+          "top1_context_tokens": 95,
+          "top3_context_tokens": 310,
+          "section_correct": false,
+          "rejected": false
+        },
+        {
+          "id": "semantic-overheat",
+          "kind": "semantic",
+          "expected_title": "02_故障诊断手册.md",
+          "rank": 1,
+          "top1_title": "02_故障诊断手册.md",
+          "top1_section_path": [
+            "星舟设备故障诊断手册",
+            "E23 研磨电机过热"
+          ],
+          "top1_context_tokens": 97,
+          "top3_context_tokens": 277,
+          "section_correct": true,
+          "rejected": false
+        },
+        {
+          "id": "exact-sla",
+          "kind": "exact",
+          "expected_title": "03_售后工单与SLA.md",
+          "rank": 1,
+          "top1_title": "03_售后工单与SLA.md",
+          "top1_section_path": [
+            "星舟售后工单分级与 SLA",
+            "P1 紧急事件"
+          ],
+          "top1_context_tokens": 125,
+          "top3_context_tokens": 305,
+          "section_correct": true,
+          "rejected": false
+        },
+        {
+          "id": "semantic-warranty",
+          "kind": "semantic",
+          "expected_title": "04_保修退换与费用政策.md",
+          "rank": 2,
+          "top1_title": "06_客服标准问答.md",
+          "top1_section_path": [
+            "星舟企业客户标准问答",
+            "“我们忘记清洁导致故障，还能免费维修吗？”"
+          ],
+          "top1_context_tokens": 97,
+          "top3_context_tokens": 328,
+          "section_correct": true,
+          "rejected": false
+        },
+        {
+          "id": "semantic-approval",
+          "kind": "semantic",
+          "expected_title": "05_安全合规与智能助手边界.md",
+          "rank": 2,
+          "top1_title": "06_客服标准问答.md",
+          "top1_section_path": [
+            "星舟企业客户标准问答",
+            "“智能助手可以直接批准退款吗？”"
+          ],
+          "top1_context_tokens": 89,
+          "top3_context_tokens": 297,
+          "section_correct": true,
+          "rejected": false
+        },
+        {
+          "id": "exact-product",
+          "kind": "exact",
+          "expected_title": "01_产品与服务目录.md",
+          "rank": 1,
+          "top1_title": "01_产品与服务目录.md",
+          "top1_section_path": [
+            "星舟智能咖啡设备产品与服务目录",
+            "X2 Pro 企业版"
+          ],
+          "top1_context_tokens": 113,
+          "top3_context_tokens": 260,
+          "section_correct": true,
+          "rejected": false
+        },
+        {
+          "id": "semantic-isolation",
+          "kind": "semantic",
+          "expected_title": "05_安全合规与智能助手边界.md",
+          "rank": 1,
+          "top1_title": "05_安全合规与智能助手边界.md",
+          "top1_section_path": [
+            "售后知识助手安全合规与权限边界",
+            "权限与租户隔离"
+          ],
+          "top1_context_tokens": 99,
+          "top3_context_tokens": 256,
+          "section_correct": true,
+          "rejected": false
+        },
+        {
+          "id": "negative-holiday",
+          "kind": "negative",
+          "expected_title": null,
+          "rank": null,
+          "top1_title": null,
+          "top1_section_path": [],
+          "top1_context_tokens": 0,
+          "top3_context_tokens": 0,
+          "section_correct": false,
+          "rejected": true
+        },
+        {
+          "id": "negative-canteen",
+          "kind": "negative",
+          "expected_title": null,
+          "rank": null,
+          "top1_title": null,
+          "top1_section_path": [],
+          "top1_context_tokens": 0,
+          "top3_context_tokens": 0,
+          "section_correct": false,
+          "rejected": true
+        }
+      ]
+    }
+  },
+  "delta_percentage_points": {
+    "hit_rate_at_1": 0.0,
+    "hit_rate_at_3": 0.0,
+    "hit_rate_at_5": 0.0,
+    "recall_at_1": 0.0,
+    "recall_at_3": 0.0,
+    "recall_at_5": 0.0,
+    "mrr_at_5": 0.0,
+    "top1_document_accuracy": 0.0,
+    "section_citation_accuracy": 85.71,
+    "negative_rejection_accuracy": 0.0
+  },
+  "context_token_reduction_percent": {
+    "top1": 77.08,
+    "top3": 74.27
+  }
+}

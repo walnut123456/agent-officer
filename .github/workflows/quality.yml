@@ -1,0 +1,33 @@
+name: quality
+
+on:
+  pull_request:
+  push:
+    branches: [main, master]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: quality-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  python:
+    name: Python application
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: hermes
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version-file: hermes/.python-version
+      - uses: astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9 # v9.0.0
+        with:
+          enable-cache: true
+          cache-dependency-glob: hermes/uv.lock
+      - run: uv sync --frozen
+      - run: uv run python -m compileall -q hermes_officer server.py mcp_stdio_server.py
+      - run: uv run python -m unittest discover -s tests -q
