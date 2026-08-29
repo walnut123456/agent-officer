@@ -8,14 +8,13 @@ max应该是定时计算的全库的max快照
 综合下来我们选了法2，经过调研，我看很多相似场景是方法1，方法2皆有的  这种场景我的结果论是，没有完美的打分算法，我们只能尝试以用户角度去逐步完善它，当然系数的话也是可以根据效果动态配置的  
 
 # 项目问答一览
-**主要架构**：
-**切分**：拿到一个文档我们会先识别类型，按照正文、标题、faq、表格、列表等，按照不同的内容去分大block,这个过程是按行正则，然后大block去递归切分成小的atom,小的atom再合并
-递归切的时候只要不超过max_token就好， 合并的条件是合并后不超过target_token,以及原chunk<=min&&合并后chunk<=max
-**测评**：
+- 主要架构：
+- 切分**：拿到一个文档我们会先识别类型，按照正文、标题、faq、表格、列表等，按照不同的内容去分大block,这个过程是按行正则，然后大block去递归切分成小的atom,小的atom再合并
+递归切的时候只要不超过max_token就好， 合并的条件是合并后不超过target_token,以及原chunk<=min&&合并后chunk<=max  
+- 测评：
 rag召回层面：Recall@k 召回目标chunk/召回chunk,HitRate@k 召回是否有目标chunk,Precision@k,召回目标chunk/目标chunk  
 rag生成层面：answer_correctness:答案和标准答案拆成事实，计算召回率(答案中被标准答案覆盖的)和准确率（标准答案中被答案命中的）的调和平均数  
 context_recall：ground_truth拆成事实，被召回chunk命中的比率
-****
 
 
 # agent-officer
