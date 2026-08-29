@@ -6,9 +6,9 @@
 max应该是定时计算的全库的max快照  
 两种打分算法，一种是多权重加法，一种是乘法
 综合下来我们选了法2，经过调研，我看很多相似场景是方法1，方法2皆有的  这种场景我的结果论是，没有完美的打分算法，我们只能尝试以用户角度去逐步完善它，当然系数的话也是可以根据效果动态配置的
-# Hermes Officer
+# agent-officer
 
-Hermes Officer 是一个纯 Python 的 AI 工作台和智能体平台。项目使用 FastAPI 提供 API、SSE 与 MCP，使用 NiceGUI 编写浏览器界面，并将 Agent、MRAG、DataAgent、文件处理、代码执行、报告和图像生成统一到一个 Python 应用中。
+agent-officer 是一个纯 Python 的 AI 工作台和智能体平台。项目使用 FastAPI 提供 API、SSE 与 MCP，使用 NiceGUI 编写浏览器界面，并将 Agent、MRAG、DataAgent、文件处理、代码执行、报告和图像生成统一到一个 Python 应用中。
 
 ## 架构
 
